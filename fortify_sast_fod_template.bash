@@ -10,7 +10,7 @@
 
 # Local variables (modify as needed)
 fod_url='https://ams.fortify.com'
-fod_api_url='https://api.ams.fortify.com/'
+fod_api_url='https://api.ams.fortify.com'
 fod_uploader_opts='-ep 2 -pp 0 -I 1 -apf'
 fod_notes="Triggered by OCI DevOps"
 scancentral_client_version='22.2.0'
