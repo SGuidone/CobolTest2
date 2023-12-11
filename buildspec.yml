@@ -3,18 +3,18 @@ env:
   parameter-store:
       ###############################################################
       #          INTEGRATE FORTIFY ON DEMAND                        #
-        FOD_RELEASE_ID: "/fod/releaseid"
-        FOD_TENANT: "/fod/tenant"
-        FOD_USER: "/fod/user"
-        FOD_PAT: "/fod/pat"  
+        FOD_RELEASE_ID: "987541"
+        FOD_TENANT: "Franklinbank"
+        FOD_USER: "Guidone"
+        FOD_PAT: "VEE2aGxANVlMcU9iUTBTZDlPd3VwQkBjZExXdSEw0"  
       ###############################################################
       #           INTEGRATE FORTIFY SCANCENTRAL                     #
-        FCLI_DEFAULT_SC_SAST_CLIENT_AUTH_TOKEN: "/fortify/client_auth_token"
-        FCLI_DEFAULT_SSC_USER: "/fortify/ssc_user"
-        FCLI_DEFAULT_SSC_PASSWORD: "/fortify/ssc_password"
-        FCLI_DEFAULT_SSC_CI_TOKEN: "/fortify/ci_token"
-        FCLI_DEFAULT_SSC_URL: "/fortify/ssc_url"
-        SSC_APP_VERSION_ID: "/fortify/ssc_app_versionid"
+      #  FCLI_DEFAULT_SC_SAST_CLIENT_AUTH_TOKEN: "/fortify/client_auth_token"
+      #  FCLI_DEFAULT_SSC_USER: "/fortify/ssc_user"
+      #  FCLI_DEFAULT_SSC_PASSWORD: "/fortify/ssc_password"
+      #  FCLI_DEFAULT_SSC_CI_TOKEN: "/fortify/ci_token"
+      # FCLI_DEFAULT_SSC_URL: "/fortify/ssc_url"
+      #  SSC_APP_VERSION_ID: "/fortify/ssc_app_versionid"
 phases:
   install:
     runtime-versions:
@@ -38,7 +38,7 @@ phases:
       #             INTEGRATE FORTIFY SAST              #
       #                                                 #
       # For FORTIFY ON DEMAND uncomment the next line   #
-      - bash fortify_sast_fod_COBOLTest1.bash
+      - bash fortify_sast_fod_template.bash
       #                                                 #
       # For FORTIFY SCANCENTRAL uncomment the next line #
       #- bash fortify_sast_scancentral_template.bash
@@ -49,5 +49,6 @@ phases:
       ###################################################
 artifacts:
   files:
-    - 'copybooks/*'
     - 'sources/*'
+    - 'copybooks/*'
+    - 'template-configuration.json'
