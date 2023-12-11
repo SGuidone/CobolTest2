@@ -51,7 +51,7 @@ fcli tool sc-client install $scancentral_client_version -d $scancentral_home
 fcli tool fodupload install $fod_uploader_version -d $fod_uploader_home
 
 # Generate Java Package for upload to Fortify on Demand
-scancentral package -o package.zip
+scancentral package -bt none -o package.zip
 
 echo "INFO: start submitting scan"
 FoDUpload -z package.zip -aurl $fod_api_url -purl $fod_url -rid ${FOD_RELEASE_ID} -tc ${FOD_TENANT} -uc ${FOD_USER} ${FOD_PAT} $fod_uploader_opts -n "$fod_notes"
