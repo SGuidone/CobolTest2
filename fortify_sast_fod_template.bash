@@ -5,8 +5,8 @@
 # Below Parameters must be defined in buildspec.yml
 	# FOD_TENANT
 	# FOD_USER	
-    # FOD_PWD
-    # FOD_RELEASE_ID
+    	# FOD_PAT
+    	# FOD_RELEASE_ID
 
 # Local variables (modify as needed)
 fod_url='https://ams.fortify.com'
